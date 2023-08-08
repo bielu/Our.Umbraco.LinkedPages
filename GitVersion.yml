@@ -1,9 +1,9 @@
 assembly-versioning-scheme: MajorMinorPatch
 mode: ContinuousDeployment
 branches:
-  main:
+  v10/main:
     mode: ContinuousDeployment
-    source-branches: [v10/main]
+    source-branches: []
     tag: ''
   pull-request:
     mode: ContinuousDeployment
