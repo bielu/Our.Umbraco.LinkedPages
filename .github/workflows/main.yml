@@ -30,7 +30,7 @@ jobs:
         
     - name: Restore dependencies
       run: dotnet restore
-      working-directory: Our.Umbraco.LinkedPages
+      working-directory:  ./src/Our.Umbraco.LinkedPages
       
     - name: Determine Version with GitVersion (MSBuild in Proj will do this)
       id:   gitversion
@@ -76,11 +76,11 @@ jobs:
       
     - name: Build
       run: dotnet build --no-restore
-      working-directory: Our.Umbraco.LinkedPages
+      working-directory: ./src/Our.Umbraco.LinkedPages
 
     - name: Dotnet Pack
       run: dotnet pack --output ../build.out/ /p:version=${{ steps.gitversion.outputs.fullSemVer }}
-      working-directory: Our.Umbraco.LinkedPages
+      working-directory:  ./src/Our.Umbraco.LinkedPages
       
     - name: Upload nuget file as build artifact      
       uses: actions/upload-artifact@v2
