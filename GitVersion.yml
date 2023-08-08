@@ -3,6 +3,7 @@ mode: ContinuousDeployment
 branches:
   main:
     mode: ContinuousDeployment
+    source-branches: ["v10/main"]
     tag: ''
   pull-request:
     mode: ContinuousDeployment
