@@ -86,7 +86,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Nuget Build Output
-        path: ./build.out/  
+        path: ./src/build.out/  
       
     - name: Push to GitHub Nuget Repo
       if: ${{ github.event_name != 'pull_request' }}
