@@ -90,4 +90,4 @@ jobs:
       
     - name: Push to GitHub Nuget Repo
       if: ${{ github.event_name != 'pull_request' }}
-      run: dotnet nuget push ./build.out/*.nupkg --skip-duplicate --source https://nuget.pkg.github.com/bielu/index.json --api-key ${{ github.token }}
+      run: dotnet nuget push ./src/build.out/*.nupkg --skip-duplicate --source https://nuget.pkg.github.com/bielu/index.json --api-key ${{ github.token }}
